@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina">
+    <header class="cabecalho">
+        <h1>Schola Latine Ecclesiae</h1>
+    </header>
+
+    <main>
+        <div class="content">
+            <div class="apresentacao">
+                <h2 class="subtítulo">
+                    Venha fazer parte da melhor escola de latim eclesial do Brasil
+                </h2>
+                <p class="corpoDeTexto">
+                    Temos professores preparados e comprometidos com sua formação em um dos pilares do catolicismo ocidental
+                </p>
+                <h2 class="subtítulo">
+                    Estude de forma descontraída pelo celular
+                </h2>
+                <p class="corpoDeTexto">
+                    Usando nosso aplicativo você pode praticar as desinências e composição de frases para fixar todos os casos, contando pontos e disputando a melhor pontuação com seus amigos
+                </p>
+                <h2 class="subtítulo">
+                    E pague pouquíssimo por isso
+                </h2>
+                <p class="corpoDeTexto">
+                    Por apenas R$29,90 tenha acesso às aulas gravas em vídeo, todos e os módulos do aplicativo desbloqueados. Detalhe: o primeiro mês é grátis 
+                </p>
+            </div>
+    
+            <form method="post">
+                <div class="formulario">
+                    <div class="títuloForm">
+                        <h2>Inscrição</h2>
+                    </div>
+                    <hr color="#D3E2E5">
+    
+                    <div class="credential">
+                        <label>Nome</label>
+                        <input id="nome" name="nome" type="text" required>
+                    </div>
+
+                    <div class="credential">
+                        <label>Email</label>
+                        <input id="email" name="email" type="email" required>
+                    </div>
+    
+                    <div class="credential">
+                        <label>Celular</label>
+                        <input id="celular" name="celular" type="text" required>
+                    </div>
+    
+                    <div class="credential">
+                        <button type="submit">Inscrever-se</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </main>
+    <script>
+        window.onsubmit = function formSubmit(e) {
+          e.preventDefault()
+          const nome = e.target.elements.nome.value
+          const email = e.target.elements.email.value
+          const celular = e.target.elements.celular.value
+          window.location.href =`cadastrado.html?nome=${nome}&email=${email}&celular=${celular}`
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina">
+    <header class="cabecalho">
+        <h1>Schola Latine Ecclesiae</h1>
+    </header>
+    <main>
+        <div class="content cadastrado">
+            <div class="apresentacao">
+
+                <h1>
+                    Inscrição feita com sucesso
+                </h1>
+
+                <br>
+
+                <h1 id="nome"></h1>
+                <h1 id="email"></h1>
+                <h1 id="celular"></h1>
+            </div>
+        </div>
+    </main>
+    <script>
+        const query = window.location.search;
+        console.log(query);
+        const params = new URLSearchParams(query);
+        const nome = params.get('nome');
+        const email = params.get('email'); 
+        const celular = params.get('celular');
+        document.getElementById('nome').innerText = 'Nome: '+nome
+        document.getElementById('email').innerText = 'Email: '+ email
+        document.getElementById('celular').innerText = 'Telefone: '+celular
+      </script>
+</body>
+</html>
